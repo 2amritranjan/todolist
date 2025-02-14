@@ -50,7 +50,7 @@ const page = () => {
           {addTask}
         </h3>
       </div>
-    </>
+      </>
   );
 };
 
