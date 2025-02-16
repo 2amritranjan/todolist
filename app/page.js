@@ -10,12 +10,12 @@ const page = () => {
   return (
     <>
     <div 
-    className='bg-slate-500 h-12 w-full text-white text-center text-xl p-2'>
+    className='bg-slate-500 h-20 w-full text-white text-center text-xl p-5'>
       <b>Amrit's Todo List</b>
       </div> 
 
       <div 
-      className='bg-blue-600 h-20 w-full flex flex-row justify-between rounded-lg'>
+      className='bg-blue-600 h-20 flex flex-row justify-between rounded-lg m-5'>
         <form 
         className='w-full flex justify-between p-5'>
 
@@ -33,19 +33,19 @@ const page = () => {
           </input>
 
           <button
-          className='bg-green-500 rounded-lg shadow-xl text-white text-3xl'
+          className='bg-green-500 rounded-lg shadow-xl text-white w-24'
           onClick={(e)=> {
             e.preventDefault();
-            setAddTask(title + "->" + description);
+            setAddTask(title + "--" + description);
             setTitle("")
             setDescription("")
           }}
-          >Add</button>
+          >Add +</button>
         </form>
       </div>
 
       <div 
-      className='bg-slate-700 text-center p-5 h-20 text-xl text-black'>
+      className='bg-slate-700 text-center p-5 h-20 w-full text-xl text-black fixed bottom-0'>
         <h3>
           {addTask}
         </h3>
